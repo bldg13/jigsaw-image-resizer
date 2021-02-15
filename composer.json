@@ -1,0 +1,16 @@
+{
+    "name": "bldg13/jigsaw-image-resizer",
+    "description": "A small utility for resizing images in Jigsaw.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nathan Gross",
+            "email": "nathan@bldg13.com", 
+            "homepage": "https://nathangross.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4."
+    }
+}
