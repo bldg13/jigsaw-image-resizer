@@ -1,18 +1,34 @@
 <?php
 
-    namespace bldg13\ImageResizer;
+    namespace Bldg13;
+    use Bldg13\Helpers\Config\Config;
 
+    use RecursiveDirectoryIterator;
+    use RecursiveIteratorIterator;
+    use RecursiveRegexIterator;
+    use RegexIterator;
+
+    require 'config/Config.php';
+    
     class ImageResizer
     {
-        public function resizeImageWidth()
+        public static function resizeImageWidth()
         {
+            $config = new Config;
 
-            $widths = [ 'small' => 400, 'medium' => 800, 'large' => 1024, 'xlarge' => 1600 ];
-
-            $sourcePath = 'source/_images';
-            $newPath = 'source/assets/images';
-            $dirPerms = 0755;
-            $recursive = true;
+            // load package config file
+            $config->load(__DIR__ . '/config.php');
+            
+            // or load Jigsaw config file
+            // $config->load('config.php');
+            
+            $widths = $config->get('image-resizer.widths.large');
+            $sourcePath = $config->get('image-resizer.paths.source');
+            $newPath = $config->get('image-resizer.paths.new');
+            $dirPerms = $config->get('image-resizer.directory.permissions');
+            $recursive = $config->get('image-resizer.directory.recursive');
+            
+            // var_dump($sourcePath); die();
 
             $directory = new RecursiveDirectoryIterator($sourcePath);
             $iterator = new RecursiveIteratorIterator($directory);

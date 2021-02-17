@@ -1,6 +1,6 @@
 {
-    "name": "bldg13/jigsaw-image-resizer",
-    "description": "A small utility for resizing images in Jigsaw.",
+    "name": "bldg13/php-image-resizer",
+    "description": "A small PHP utility for resizing images.",
     "license": "MIT",
     "authors": [
         {
@@ -12,5 +12,8 @@
     ],
     "require": {
         "php": ">=7.4."
+    },
+    "autoload": {
+       "psr-4": { "Bldg13\\Helpers\\Config\\": "src/config" }
     }
 }
