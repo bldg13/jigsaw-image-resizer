@@ -1,7 +1,7 @@
 <?php
 
     namespace Bldg13;
-    use Bldg13\Helpers\Config\Config;
+    use Bldg13\ImageResizer\Config;
 
     use RecursiveDirectoryIterator;
     use RecursiveIteratorIterator;

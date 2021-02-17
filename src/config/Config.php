@@ -3,7 +3,7 @@
 // Source
 // https://www.youtube.com/watch?v=qyKt4NF_82g
 
-namespace Bldg13\Helpers\Config;
+namespace Bldg13\ImageResizer;
 
 class Config
 {
